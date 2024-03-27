@@ -4,8 +4,10 @@ import {
   TextInput,
   TouchableOpacity,
   Text,
+  ImageBackground,
   StyleSheet,
 } from 'react-native';
+import BackgroundImg from '../../assets/images/login/login1.jpg';
 
 const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState('');
@@ -21,28 +23,35 @@ const LoginScreen = ({navigation}) => {
   };
 
   return (
-    <View style={styles.container}>
-      <TextInput
-        style={styles.input}
-        placeholder="Email"
-        value={email}
-        onChangeText={setEmail}
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Password"
-        value={password}
-        onChangeText={setPassword}
-        secureTextEntry
-      />
-      <TouchableOpacity style={styles.button} onPress={handleLogin}>
-        <Text style={styles.buttonText}>Login</Text>
-      </TouchableOpacity>
-    </View>
+    <ImageBackground source={BackgroundImg} style={styles.background}>
+      <View style={styles.container}>
+        <TextInput
+          style={styles.input}
+          placeholder="Email"
+          value={email}
+          onChangeText={setEmail}
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="Password"
+          value={password}
+          onChangeText={setPassword}
+          secureTextEntry
+        />
+        <TouchableOpacity style={styles.button} onPress={handleLogin}>
+          <Text style={styles.buttonText}>Login</Text>
+        </TouchableOpacity>
+      </View>
+    </ImageBackground>
   );
 };
 
 const styles = StyleSheet.create({
+  background: {
+    flex: 1,
+    resizeMode: 'cover',
+    justifyContent: 'center',
+  },
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -56,11 +65,12 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 10,
     marginBottom: 10,
+    backgroundColor: 'rgba(255, 255, 255, 0.5)',
   },
   button: {
     width: '100%',
     height: 50,
-    backgroundColor: '#007AFF',
+    backgroundColor: 'rgba(0, 122, 255, 0.5)',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 5,
