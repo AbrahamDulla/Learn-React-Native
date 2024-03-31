@@ -4,6 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import LoginScreen from './app/components/screens/LoginScreens';
 import HomeScreen from './app/components/screens/HomeScreen';
 import {Text, TouchableOpacity} from 'react-native';
+import Exercises from './app/components/screens/Exercises';
 
 const Stack = createNativeStackNavigator();
 
@@ -15,6 +16,11 @@ const App = () => {
           name="Login"
           component={LoginScreen}
           options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="exercises"
+          component={Exercises}
+          // options={{headerShown: false}}
         />
         <Stack.Screen
           name="Home"

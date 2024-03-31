@@ -12,20 +12,24 @@ import BackgroundImg from '../../assets/images/login/login1.jpg';
 // Define data for cards including image paths
 const homeData = [
   {
-    name: 'Exercises Database',
+    name: 'Exercises',
     image: require('../../assets/images/login/login1.jpg'),
+    navigateTo: 'exercises',
   },
   {
-    name: 'Workout Plan',
+    name: 'Plans',
     image: require('../../assets/images/login/workoutplan.jpeg'),
+    navigateTo: 'plans',
   },
   {
-    name: 'Workout Tracking',
+    name: 'Tracking',
     image: require('../../assets/images/login/workout-tracking.jpg'),
+    navigateTo: 'tracking',
   },
   {
-    name: 'Goal Setting',
+    name: 'Goals',
     image: require('../../assets/images/login/goal.jpg'),
+    navigateTo: 'goals',
   },
 ];
 
@@ -39,7 +43,7 @@ const HomeScreen = ({navigation}) => {
           style={styles.background}>
           <TouchableOpacity
             style={styles.card}
-            onPress={() => navigation.navigate('Profile')}>
+            onPress={() => navigation.navigate(home.navigateTo)}>
             <Text style={styles.cardText}>{home.name}</Text>
           </TouchableOpacity>
         </ImageBackground>
@@ -57,22 +61,29 @@ const styles = StyleSheet.create({
     gap: 20,
   },
   background: {
-    width: 350, // Adjust according to your requirement
-    height: 200, // Adjust according to your requirement
+    width: 350,
+    height: 200,
     borderRadius: 10,
-    overflow: 'hidden', // Ensure the image is clipped within the border radius
+    overflow: 'hidden',
     marginVertical: 10,
     marginHorizontal: 10,
   },
   card: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: 'left',
+    justifyContent: 'flex-start',
   },
   cardText: {
-    fontSize: 18,
+    width: 120,
+    display: 'flex',
+    top: 10,
+    left: 10,
+    padding: 5,
+    backgroundColor: 'red',
+    fontSize: 24,
     fontWeight: 'bold',
     color: 'white',
+    borderRadius: 5,
   },
 });
 
