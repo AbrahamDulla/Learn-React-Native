@@ -20,6 +20,9 @@ const App = () => {
         <Stack.Screen
           name="exercises"
           component={Exercises}
+          options={({navigation}) => ({
+            headerTitle: 'Exercises',
+          })}
           // options={{headerShown: false}}
         />
         <Stack.Screen
