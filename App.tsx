@@ -24,8 +24,8 @@ const App = () => {
             headerRight: () => (
               <TouchableOpacity
                 style={{marginRight: 10}}
-                onPress={() => navigation.navigate('Profile')}>
-                <Text style={{color: 'blue'}}>Profile</Text>
+                onPress={() => navigation.navigate('Login')}>
+                <Text>Logout</Text>
               </TouchableOpacity>
             ),
             headerBackVisible: false,
