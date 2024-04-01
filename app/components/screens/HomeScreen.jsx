@@ -31,6 +31,11 @@ const homeData = [
     image: require('../../assets/images/login/goal.jpg'),
     navigateTo: 'goals',
   },
+  {
+    name: 'Events and Articles',
+    image: require('../../assets/images/login/goal.jpg'),
+    navigateTo: 'goals',
+  },
 ];
 
 const HomeScreen = ({navigation}) => {
@@ -74,7 +79,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
   cardText: {
-    width: 120,
+    width: 140,
     display: 'flex',
     top: 10,
     left: 10,

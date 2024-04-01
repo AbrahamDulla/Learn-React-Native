@@ -22,6 +22,10 @@ const LoginScreen = ({navigation}) => {
     navigation.navigate('Home');
   };
 
+  const createAccount = () => {
+    navigation.navigate('Home');
+  };
+
   return (
     <ImageBackground source={BackgroundImg} style={styles.background}>
       <View style={styles.container}>
@@ -40,6 +44,17 @@ const LoginScreen = ({navigation}) => {
         />
         <TouchableOpacity style={styles.button} onPress={handleLogin}>
           <Text style={styles.buttonText}>Login</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={createAccount}>
+          <Text
+            style={{
+              marginTop: 3,
+              color: 'white',
+              fontSize: 16,
+              fontWeight: 'bold',
+            }}>
+            I don't have account
+          </Text>
         </TouchableOpacity>
       </View>
     </ImageBackground>

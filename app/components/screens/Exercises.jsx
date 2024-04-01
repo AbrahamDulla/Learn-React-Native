@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
   backgroundImage: {
     width: 160,
     height: 150,
-    borderRadius: 10,
+    borderRadius: 3,
     overflow: 'hidden',
   },
 });
